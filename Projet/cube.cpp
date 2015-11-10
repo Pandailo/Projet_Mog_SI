@@ -164,15 +164,15 @@ void Tete()
 	glTranslatef(0, 0.9, 0);
 	glScalef(0.1, 0.1, 0.1);
 	glColor3f(1, 1, 1);
-	glutSolidSphere(1, 50, 50);
+	glutSolidSphere(1.5, 50, 50);
 	glPopMatrix();
 }
 //Dessin corps Mog
 void Corps()
 {
 	glPushMatrix();
-	glTranslatef(0, 0.4, 0);
-	glScalef(0.2, .4, .2);
+	glTranslatef(0, 0.5, 0);
+	glScalef(0.2, .3, .2);
 	glColor3f(1, 0, 0);
 	glutSolidSphere(1, 50, 50);
 	glPopMatrix();
@@ -181,10 +181,10 @@ void Corps()
 void BrasG()
 {
 	glPushMatrix();
-	glTranslatef(0.25, 0.5, 0);
+	glTranslatef(0.2, 0.6, 0);
 	glRotatef(45, 0, 0, 1);
 	glColor3f(1, 1, 1);
-	glScalef(0.1, 0.25, 0.1);
+	glScalef(0.075, 0.15, 0.075);
 	glutSolidSphere(1, 50, 50);
 	glPopMatrix();
 }
@@ -192,10 +192,10 @@ void BrasG()
 void BrasD()
 {
 	glPushMatrix();
-	glTranslatef(-0.25, 0.5, 0);
+	glTranslatef(-0.2, 0.6, 0);
 	glRotatef(-45, 0, 0, 1);
 	glColor3f(1, 1, 1);
-	glScalef(0.1, 0.25, 0.1);
+	glScalef(0.075, 0.15, 0.075);
 	glutSolidSphere(1, 50, 50);
 	glPopMatrix();
 }
