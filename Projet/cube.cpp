@@ -48,6 +48,9 @@ void Corps();
 void BrasG();
 void BrasD();
 void pointCylindre(float r, float h);
+void AfficheCylindre();
+void AfficheSphere();
+void Sol();
 int main(int argc,char **argv)
 {
 
@@ -94,6 +97,7 @@ glShadeModel(GL_SMOOTH);
   Corps();
   BrasG();
   BrasD();
+  Sol();
     
     //Repère
     //axe x en rouge
@@ -162,6 +166,7 @@ void Tete()
 {
 	glPushMatrix();
 	glTranslatef(0, 0.9, 0);
+
 	glScalef(0.1, 0.1, 0.1);
 	glColor3f(1, 1, 1);
 	glutSolidSphere(1.5, 50, 50);
@@ -174,7 +179,8 @@ void Corps()
 	glTranslatef(0, 0.5, 0);
 	glScalef(0.2, .3, .2);
 	glColor3f(1, 0, 0);
-	glutSolidSphere(1, 50, 50);
+	pointCylindre(1, 1);
+	AfficheSphere();
 	glPopMatrix();
 }
 //Dessin Bras Gauche
@@ -198,6 +204,82 @@ void BrasD()
 	glScalef(0.075, 0.15, 0.075);
 	glutSolidSphere(1, 50, 50);
 	glPopMatrix();
+}
+
+void Sol()
+{
+	glPushMatrix();
+	glTranslatef(0, -0.1, 0);
+	glScalef(12, 0.1, 12);
+	glutSolidCube(12);
+	glPopMatrix();
+}
+
+void pointCylindre(float r, float h)
+{
+	for (int i = 0; i < n; i++)
+	{
+		pCylindre[i] = { r*cos((i * 2 * PI) / n), r*sin((i * 2 * PI) / n), h / 2 };
+		pCylindre[i + n] = { r*cos((i * 2 * PI) / n), r*sin((i * 2 * PI) / n), -(h / 2) };
+	}
+	for (int i = 0; i < n; i++)
+	{
+		sommetCylindre[i][0] = pCylindre[i];
+		sommetCylindre[i + n][0] = pCylindre[i + n];
+		sommetCylindre[i][1] = pCylindre[(i + 1) % n];
+		sommetCylindre[i + n][1] = pCylindre[((i + 1) % n) + n];
+		sommetCylindre[i][2] = { 0, 0, h / 2 };
+		sommetCylindre[i + n][2] = { 0, 0, -(h / 2) };
+	}
+}
+
+void afficheCylindre()
+{
+	for (int i = 0; i < n; i++)
+	{
+		glBegin(GL_POLYGON);
+		for (int j = 0; j < 3; j++)
+		{
+			glColor3f(1, 0.85, 0);
+			glVertex3f(sommetCylindre[i][j].x, sommetCylindre[i][j].y, sommetCylindre[i][j].z);
+		}
+		glEnd();
+		glBegin(GL_POLYGON);
+		for (int j = 0; j < 3; j++)
+		{
+			glColor3f(1, 0.85, 0);
+			glVertex3f(sommetCylindre[i + n][j].x, sommetCylindre[i + n][j].y, sommetCylindre[i + n][j].z);
+		}
+		glEnd();
+		glBegin(GL_POLYGON);
+		glColor3f(1, 0.85, 0);
+		glVertex3f(pCylindre[i].x, pCylindre[i].y, pCylindre[i].z);
+		glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y, pCylindre[(i + 1) % n].z);
+		glVertex3f(pCylindre[((i + 1) % n) + n].x, pCylindre[((i + 1) % n) + n].y, pCylindre[((i + 1) % n) + n].z);
+		glVertex3f(pCylindre[i + n].x, pCylindre[i + n].y, pCylindre[i + n].z);
+		glEnd();
+	}
+}
+
+
+void afficheSphere()
+{
+	for (int j = 0; j < n; j++)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			glPushMatrix();
+			glRotatef(180 * j / n, 1, 0, 0);
+			glBegin(GL_POLYGON);
+			glColor3f(1, 1, 1);
+			glVertex3f(pCylindre[i].x, pCylindre[i].y, 0);
+			glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y, 0);
+			glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y*cos(PI / (n - 1)), pCylindre[(i + 1) % n].y*sin(PI / (n - 1)));
+			glVertex3f(pCylindre[i].x, pCylindre[i].y*cos(PI / (n - 1)), pCylindre[i].y*sin(PI / (n - 1)));
+			glEnd();
+			glPopMatrix();
+		}
+	}
 }
 
 /* Affichage du cylindre facettisé */
