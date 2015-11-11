@@ -51,6 +51,10 @@ void pointCylindre(float r, float h);
 void AfficheCylindre();
 void AfficheSphere();
 void Sol();
+void JG();
+void JD();
+
+
 int main(int argc,char **argv)
 {
 
@@ -97,7 +101,8 @@ glShadeModel(GL_SMOOTH);
   Corps();
   BrasG();
   BrasD();
-  Sol();
+  JG();
+  JD();
     
     //Repère
     //axe x en rouge
@@ -179,8 +184,7 @@ void Corps()
 	glTranslatef(0, 0.5, 0);
 	glScalef(0.2, .3, .2);
 	glColor3f(1, 0, 0);
-	pointCylindre(1, 1);
-	AfficheSphere();
+	glutSolidSphere(1,20,20);
 	glPopMatrix();
 }
 //Dessin Bras Gauche
@@ -205,15 +209,34 @@ void BrasD()
 	glutSolidSphere(1, 50, 50);
 	glPopMatrix();
 }
-
-void Sol()
+void JG()
+{
+	glPushMatrix();
+	glTranslatef(-0.15, 0.15, 0);
+	glRotatef(-25, 0, 0, 1);
+	glColor3f(1, 1, 1);
+	glScalef(0.075, 0.2, 0.075);
+	glutSolidSphere(1, 50, 50);
+	glPopMatrix();
+}
+void JD()
+{
+	glPushMatrix();
+	glTranslatef(0.15, 0.15, 0);
+	glRotatef(25, 0, 0, 1);
+	glColor3f(1, 1, 1);
+	glScalef(0.075, 0.2, 0.075);
+	glutSolidSphere(1, 50, 50);
+	glPopMatrix();
+}
+/*void Sol()
 {
 	glPushMatrix();
 	glTranslatef(0, -0.1, 0);
 	glScalef(12, 0.1, 12);
 	glutSolidCube(12);
 	glPopMatrix();
-}
+}*/
 
 void pointCylindre(float r, float h)
 {
@@ -323,7 +346,7 @@ void afficheSphere()
 		glEnd();
 	}
 }*/
-void pointCylindre(float r, float h)
+/*void pointCylindre(float r, float h)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -340,6 +363,7 @@ void pointCylindre(float r, float h)
 		sommetCylindre[i + n][2] = { 0, 0, -(h / 2) };
 	}
 }
+*/
 void mouse(int button, int state,int x,int y)
 {
   /* si on appuie sur le bouton gauche */

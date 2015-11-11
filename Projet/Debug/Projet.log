@@ -1,24 +1,42 @@
-﻿La génération a démarré 11/11/2015 09:56:38.
-     1>Projet "F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Projet.vcxproj" sur le nœud 2 (Build cible(s)).
+﻿La génération a démarré 11/11/2015 10:47:15.
+     1>Projet "C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Projet.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt cube.cpp
          cube.cpp
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(91): warning C4244: 'argument' : conversion de 'int' en 'GLfloat', perte possible de données
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(92): warning C4244: 'argument' : conversion de 'int' en 'GLfloat', perte possible de données
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(84): warning C4101: 'j' : variable locale non référencée
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(84): warning C4101: 'i' : variable locale non référencée
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(164): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(166): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(176): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(185): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(188): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(196): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
-     1>f:\cours\l3\image\synthese\projet_mog_si\projet\cube.cpp(199): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(98): warning C4244: 'argument' : conversion de 'int' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(99): warning C4244: 'argument' : conversion de 'int' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(91): warning C4101: 'j' : variable locale non référencée
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(91): warning C4101: 'i' : variable locale non référencée
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(173): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(175): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(185): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(194): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(197): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(205): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(208): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(215): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(218): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(225): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(228): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(266): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(267): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(273): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(274): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(278): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(279): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(280): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(281): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(282): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(295): warning C4244: 'argument' : conversion de 'int' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(298): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(299): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(300): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(301): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Debug\Projet.lib" /MACHINE:X86 Debug\cube.obj
-         Projet.vcxproj -> F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Debug\Projet.exe
-     1>Génération du projet "F:\COURS\L3\Image\Synthese\Projet_Mog_SI\Projet\Projet.vcxproj" terminée (Build cible(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.lib" /MACHINE:X86 Debug\cube.obj
+         Projet.vcxproj -> C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.exe
+     1>Génération du projet "C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Projet.vcxproj" terminée (Build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.37
+Temps écoulé 00:00:00.39
