@@ -214,7 +214,7 @@ void BrasD()
 void JG()
 {
 	glPushMatrix();
-	glTranslatef(-0.15, 0.15, 0);
+	glTranslatef(-0.15, 0.2, 0);
 	glRotatef(-25, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.2, 0.075);
@@ -224,7 +224,7 @@ void JG()
 void JD()
 {
 	glPushMatrix();
-	glTranslatef(0.15, 0.15, 0);
+	glTranslatef(0.15, 0.2, 0);
 	glRotatef(25, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.2, 0.075);
@@ -234,11 +234,10 @@ void JD()
 void Sol()
 {
 	glPushMatrix();
-	glColor3f(1, 1, 1);
-	//glTranslatef(0, -0.1, 0);
-	GLUquadricObj *quadratic;
-	quadratic = gluNewQuadric();
-	gluCylinder(quadratic,12,12,0.2,20,20);
+	glScalef(1, 0.0001, 1);
+	glColor3f(0, 1, 1);
+	glTranslatef(0, -0.1, 0);
+	glutSolidCube(12);
 	glPopMatrix();
 }
 
@@ -273,7 +272,7 @@ void sphere(double r, int nm, int np)
 
 
 /* Affichage du cylindre facettisé */
-/*void afficheCylindre()
+void afficheCylindre()
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -312,8 +311,8 @@ void sphere(double r, int nm, int np)
 		glVertex3f(pCylindre[i + n].x, pCylindre[i + n].y, pCylindre[i + n].z);
 		glEnd();
 	}
-}*/
-/*void pointCylindre(float r, float h)
+}
+void pointCylindre(float r, float h)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -330,7 +329,7 @@ void sphere(double r, int nm, int np)
 		sommetCylindre[i + n][2] = { 0, 0, -(h / 2) };
 	}
 }
-*/
+
 void mouse(int button, int state,int x,int y)
 {
   /* si on appuie sur le bouton gauche */

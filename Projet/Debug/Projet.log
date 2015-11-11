@@ -1,4 +1,4 @@
-﻿La génération a démarré 11/11/2015 11:29:32.
+﻿La génération a démarré 11/11/2015 11:52:49.
      1>Projet "C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Projet.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt cube.cpp
@@ -18,14 +18,27 @@
      1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(220): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
      1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(227): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
      1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(230): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(237): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(239): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(256): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(257): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(259): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(260): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(262): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
      1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(263): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(264): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(265): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
      1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(266): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(267): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(269): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(270): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(272): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
-     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(273): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(284): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(290): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(293): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(301): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(302): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(304): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(305): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(307): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(308): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(310): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
+     1>c:\users\yann\documents\github\projet_mog_si\projet\cube.cpp(311): warning C4244: 'argument' : conversion de 'double' en 'GLfloat', perte possible de données
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.lib" /MACHINE:X86 Debug\cube.obj
          Projet.vcxproj -> C:\Users\Yann\Documents\GitHub\Projet_Mog_SI\Projet\Debug\Projet.exe
@@ -33,4 +46,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.41
+Temps écoulé 00:00:00.43
