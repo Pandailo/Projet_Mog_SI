@@ -53,6 +53,7 @@ void AfficheSphere();
 void Sol();
 void JG();
 void JD();
+void sphere(double r, int nm, int np);
 
 
 int main(int argc,char **argv)
@@ -174,7 +175,7 @@ void Tete()
 
 	glScalef(0.1, 0.1, 0.1);
 	glColor3f(1, 1, 1);
-	glutSolidSphere(1.5, 50, 50);
+	sphere(1.5, 50, 50);
 	glPopMatrix();
 }
 //Dessin corps Mog
@@ -184,7 +185,7 @@ void Corps()
 	glTranslatef(0, 0.5, 0);
 	glScalef(0.2, .3, .2);
 	glColor3f(1, 0, 0);
-	glutSolidSphere(1,20,20);
+	sphere(1,20,20);
 	glPopMatrix();
 }
 //Dessin Bras Gauche
@@ -195,7 +196,7 @@ void BrasG()
 	glRotatef(45, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.15, 0.075);
-	glutSolidSphere(1, 50, 50);
+	sphere(1, 50, 50);
 	glPopMatrix();
 }
 //Dessin Bras Droit
@@ -206,7 +207,7 @@ void BrasD()
 	glRotatef(-45, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.15, 0.075);
-	glutSolidSphere(1, 50, 50);
+	sphere(1, 50, 50);
 	glPopMatrix();
 }
 void JG()
@@ -216,7 +217,7 @@ void JG()
 	glRotatef(-25, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.2, 0.075);
-	glutSolidSphere(1, 50, 50);
+	sphere(1, 50, 50);
 	glPopMatrix();
 }
 void JD()
@@ -226,7 +227,7 @@ void JD()
 	glRotatef(25, 0, 0, 1);
 	glColor3f(1, 1, 1);
 	glScalef(0.075, 0.2, 0.075);
-	glutSolidSphere(1, 50, 50);
+	sphere(1, 50, 50);
 	glPopMatrix();
 }
 /*void Sol()
@@ -238,72 +239,35 @@ void JD()
 	glPopMatrix();
 }*/
 
-void pointCylindre(float r, float h)
+void sphere(double r, int nm, int np)
 {
-	for (int i = 0; i < n; i++)
-	{
-		pCylindre[i] = { r*cos((i * 2 * PI) / n), r*sin((i * 2 * PI) / n), h / 2 };
-		pCylindre[i + n] = { r*cos((i * 2 * PI) / n), r*sin((i * 2 * PI) / n), -(h / 2) };
-	}
-	for (int i = 0; i < n; i++)
-	{
-		sommetCylindre[i][0] = pCylindre[i];
-		sommetCylindre[i + n][0] = pCylindre[i + n];
-		sommetCylindre[i][1] = pCylindre[(i + 1) % n];
-		sommetCylindre[i + n][1] = pCylindre[((i + 1) % n) + n];
-		sommetCylindre[i][2] = { 0, 0, h / 2 };
-		sommetCylindre[i + n][2] = { 0, 0, -(h / 2) };
-	}
-}
-
-void afficheCylindre()
-{
-	for (int i = 0; i < n; i++)
-	{
-		glBegin(GL_POLYGON);
-		for (int j = 0; j < 3; j++)
+	for (int i = 0; i < nm; i++)
+		for (int j = 0; j < np; j++)
 		{
-			glColor3f(1, 0.85, 0);
-			glVertex3f(sommetCylindre[i][j].x, sommetCylindre[i][j].y, sommetCylindre[i][j].z);
-		}
-		glEnd();
-		glBegin(GL_POLYGON);
-		for (int j = 0; j < 3; j++)
-		{
-			glColor3f(1, 0.85, 0);
-			glVertex3f(sommetCylindre[i + n][j].x, sommetCylindre[i + n][j].y, sommetCylindre[i + n][j].z);
-		}
-		glEnd();
-		glBegin(GL_POLYGON);
-		glColor3f(1, 0.85, 0);
-		glVertex3f(pCylindre[i].x, pCylindre[i].y, pCylindre[i].z);
-		glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y, pCylindre[(i + 1) % n].z);
-		glVertex3f(pCylindre[((i + 1) % n) + n].x, pCylindre[((i + 1) % n) + n].y, pCylindre[((i + 1) % n) + n].z);
-		glVertex3f(pCylindre[i + n].x, pCylindre[i + n].y, pCylindre[i + n].z);
-		glEnd();
-	}
-}
+			double p = (-PI / 2) + (i*PI) / (nm - 1);
+			double t = (2 * j*PI) / np;
+			double p2 = (-PI / 2) + (((i + 1) % nm)*PI) / (nm - 1);
+			double t2 = (2 * ((j + 1) % np)*PI) / np;
 
-
-void afficheSphere()
-{
-	for (int j = 0; j < n; j++)
-	{
-		for (int i = 0; i < n; i++)
-		{
-			glPushMatrix();
-			glRotatef(180 * j / n, 1, 0, 0);
 			glBegin(GL_POLYGON);
-			glColor3f(1, 1, 1);
-			glVertex3f(pCylindre[i].x, pCylindre[i].y, 0);
-			glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y, 0);
-			glVertex3f(pCylindre[(i + 1) % n].x, pCylindre[(i + 1) % n].y*cos(PI / (n - 1)), pCylindre[(i + 1) % n].y*sin(PI / (n - 1)));
-			glVertex3f(pCylindre[i].x, pCylindre[i].y*cos(PI / (n - 1)), pCylindre[i].y*sin(PI / (n - 1)));
+
+			glTexCoord2f((double)i*(1 / (double)nm), (double)j / (double)np);
+			glVertex3f(r*cos(p)*cos(t), r*cos(p)*sin(t), r*sin(p));
+
+			glTexCoord2f(((double)i + 1)*(1 / (double)nm), (double)j / (double)np);
+			glVertex3f(r*cos(p2)*cos(t), r*cos(p2)*sin(t), r*sin(p2));
+
+			glTexCoord2f(((double)i + 1)*(1 / (double)nm), ((double)(j + 1)) / (double)np);
+			glVertex3f(r*cos(p2)*cos(t2), r*cos(p2)*sin(t2), r*sin(p2));
+
+			glTexCoord2f((double)i*(1 / (double)nm), ((double)(j + 1)) / (double)np);
+			glVertex3f(r*cos(p)*cos(t2), r*cos(p)*sin(t2), r*sin(p));
 			glEnd();
-			glPopMatrix();
 		}
-	}
 }
+
+
+
 
 /* Affichage du cylindre facettisé */
 /*void afficheCylindre()
