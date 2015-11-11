@@ -104,6 +104,7 @@ glShadeModel(GL_SMOOTH);
   BrasD();
   JG();
   JD();
+  Sol();
     
     //Repère
     //axe x en rouge
@@ -230,14 +231,16 @@ void JD()
 	sphere(1, 50, 50);
 	glPopMatrix();
 }
-/*void Sol()
+void Sol()
 {
 	glPushMatrix();
-	glTranslatef(0, -0.1, 0);
-	glScalef(12, 0.1, 12);
-	glutSolidCube(12);
+	glColor3f(1, 1, 1);
+	//glTranslatef(0, -0.1, 0);
+	GLUquadricObj *quadratic;
+	quadratic = gluNewQuadric();
+	gluCylinder(quadratic,12,12,0.2,20,20);
 	glPopMatrix();
-}*/
+}
 
 void sphere(double r, int nm, int np)
 {
