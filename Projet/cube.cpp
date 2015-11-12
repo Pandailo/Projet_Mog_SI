@@ -158,6 +158,15 @@ void clavier(unsigned char touche,int x,int y)
       break;
     case 'q' : /*la touche 'q' permet de quitter le programme */
       exit(0);
+	/*case 'u':
+		glTranslatef(0, 0.2, 0);
+		Tete();
+		Corps();
+		BrasD();
+		BrasG();
+		JG();
+		JD();
+		*/
     }
 }
 
